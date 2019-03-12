@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on MIL-E-WAH-QUE</title>
-    <link>http://example.org/posts/</link>
+    <link>https://rakallay.github.io/posts/</link>
     <description>Recent content in Posts on MIL-E-WAH-QUE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rakallay.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Software Cohesion</title>
-      <link>http://example.org/posts/cohesion/</link>
+      <link>https://rakallay.github.io/posts/cohesion/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/cohesion/</guid>
+      <guid>https://rakallay.github.io/posts/cohesion/</guid>
       <description>Cohesion In 2013 or 2014 I was in a training class and the instructor brought up the term cohesion when describing some code the class was analyzing. This was the first time I had heard of the term cohesion being applied to a piece of code and the instructor did not spend much time on the topic. As a way of cementing the idea in my mind, I wanted to share some things I’ve read and learned regarding cohesion in software.</description>
     </item>
     
