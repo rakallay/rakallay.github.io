@@ -12,7 +12,7 @@ publishdir = "_deploy"
   filename = "sitemap.xml"
 
 [params]
-  description = "The last theme you'll ever need. Maybe."
+  description = "Richard Kallay's blog"
   twitter = "https://twitter.com/RichardKallay"
   instagram = ""
   youtube = ""
