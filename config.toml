@@ -1,0 +1,24 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "MIL-E-WAH-QUE"
+theme = "ananke"
+themesDir = "./themes"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  description = "The last theme you'll ever need. Maybe."
+  twitter = "https://twitter.com/RichardKallay"
+  instagram = ""
+  youtube = ""
+  github = "https://github.com/rakallay"
+  gitlab = ""
+  linkedin = "https://www.linkedin.com/in/richard-kallay-062b2a64/"
+  mastodon = ""
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-navy"
+  featured_image = "/images/giants-causeway.jpg"
+  recent_posts_number = 2
