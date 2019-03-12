@@ -4,6 +4,8 @@ title = "MIL-E-WAH-QUE"
 theme = "ananke"
 themesDir = "./themes"
 
+publishdir = "_deploy"
+
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
