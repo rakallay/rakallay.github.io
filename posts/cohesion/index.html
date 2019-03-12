@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>MIL-E-WAH-QUE  | Software Cohesion</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.54.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Software Cohesion" />
+<meta property="og:description" content="Cohesion In 2013 or 2014 I was in a training class and the instructor brought up the term cohesion when describing some code the class was analyzing. This was the first time I had heard of the term cohesion being applied to a piece of code and the instructor did not spend much time on the topic. As a way of cementing the idea in my mind, I wanted to share some things I’ve read and learned regarding cohesion in software." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/cohesion/" />
+<meta property="article:published_time" content="2018-01-07T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-01-07T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Software Cohesion">
+<meta itemprop="description" content="Cohesion In 2013 or 2014 I was in a training class and the instructor brought up the term cohesion when describing some code the class was analyzing. This was the first time I had heard of the term cohesion being applied to a piece of code and the instructor did not spend much time on the topic. As a way of cementing the idea in my mind, I wanted to share some things I’ve read and learned regarding cohesion in software.">
+
+
+<meta itemprop="datePublished" content="2018-01-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-01-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2977">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Software Cohesion"/>
+<meta name="twitter:description" content="Cohesion In 2013 or 2014 I was in a training class and the instructor brought up the term cohesion when describing some code the class was analyzing. This was the first time I had heard of the term cohesion being applied to a piece of code and the instructor did not spend much time on the topic. As a way of cementing the idea in my mind, I wanted to share some things I’ve read and learned regarding cohesion in software."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-navy">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      MIL-E-WAH-QUE
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+<a href="https://twitter.com/RichardKallay" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+<a href="https://www.linkedin.com/in/richard-kallay-062b2a64/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/rakallay" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Software Cohesion</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2018-01-07T00:00:00Z">January 7, 2018</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="cohesion">Cohesion</h1>
+
+<p>In 2013 or 2014 I was in a training class and the instructor brought up the term cohesion when describing some code the class was analyzing.  This was the first time I had heard of the term cohesion being applied to a piece of code and the instructor did not spend much time on the topic.  As a way of cementing the idea in my mind, I wanted to share some things I’ve read and learned regarding cohesion in software.</p>
+
+<h2 id="what-is-it">What is it?</h2>
+
+<p>According to Merriam Webster[1] cohesion is</p>
+
+<blockquote>
+<p>1: the act or state of sticking together tightly; especially : unity &lt;the lack of cohesion in the Party — The Times Literary Supplement (London)&gt; &lt;cohesion among soldiers in a unit&gt;</p>
+
+<p>2: union between similar plant parts or organs</p>
+
+<p>3: molecular attraction by which the particles of a body are united throughout the mass</p>
+</blockquote>
+
+<p>So, if we use the dictionary definition of cohesion, we could take that it means that cohesive software sticks together or cohesive software combines together similar parts of code into one module or group.</p>
+
+<p>There are some decent answers on stackoverflow as to what cohesion is <a href="http://stackoverflow.com/questions/3085285/cohesion-coupling">[2]</a> but I couldn’t find anything that goes into extensive detail.   I did watch a video by Uncle Bob regarding Component Cohesion<a href="https://cleancoders.com/episode/clean-code-episode-16/show">[3]</a>, but that didn’t go the level of software cohesion that I was looking for.  I wanted to share some notes I’ve taken from a 1979 book titled “Structured Design – Fundamentals of a Discipline of Computer Program and Systems Design”<a href="https://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719">[4]</a>.  This book has an entire 40 pages(chapter 7) dedicated to talking about cohesion between software modules!</p>
+
+<p>With the book being published in 1979, it is a little tough to digest some of the coding examples, but I found myself discovering statements that are eerily similar to statements that software engineers continue to make today.  Here are a few examples</p>
+
+<p>When referring to “coincidental cohesion”:</p>
+
+<blockquote>
+<p>“Modules of this type have a propensity to appear at an early point in classroom introductions to “subroutinization”.  The practice was prevalent (and sometimes justified) in the early 1960’s, when the available computers tended to have severe memory limitations.  Unfortunately, even in today’s world of multi-megabyte computers, some designers persist in developing  coincidentally cohesive modules in attempt to save memory.”</p>
+</blockquote>
+
+<p>When discussing new trends in the software industry –</p>
+
+<blockquote>
+<p>“In the past few years, the computer industry has been revolutionized by a number of new philosophies and techniques.  One of the most popular of these techniques, structured programming, in some cases has led to order-of magnitude improvements in productivity, reliability, and maintenance costs associated with computer systems.</p>
+
+<p>More recently, though, there has been a recognition that perfect structuring of GOTO-less code may be of little value if the basic design of the program or system is unsound.  Indeed, there are a number of well-known case studies, including the now famed IBM system for The New York Times, in which maintenance problems have persisted despite the use of top-down structured programming techniques.  In virtually all of these cases, the problems were due to misunderstanding of some fundamental design techniques.”</p>
+</blockquote>
+
+<p>This quote is similar to what I’m sure has been said about object oriented programming and functional programming.  I’d imagine for object oriented programming you can replace “GOTO-less” with “free of procedural style”.  For functional programming replace “GOTO-less” with “not object oriented or procedural”.    The end takeaway from that statement is that there is no “silver bullet”<a href="https://en.wikipedia.org/wiki/No_Silver_Bullet">[5]</a> programming style which can withstand bad design.</p>
+
+<h2 id="types-of-cohesion">Types of Cohesion</h2>
+
+<p>In chapter 7, the authors describe seven different levels of cohesion</p>
+
+<ul>
+<li>coincidental</li>
+<li>logical</li>
+<li>temporal</li>
+<li>procedural</li>
+<li>communicational</li>
+<li>sequential</li>
+<li>functional</li>
+</ul>
+
+<p>The goal of this blog post is to describe these levels of cohesion.  In a future blog post or series of posts I’ll try to give a code example of what I think a program with this type of cohesion would look like in Java or another current language.</p>
+
+<p>All of the quoted material in the sections that follow are taken directly from the Structured Design book.</p>
+
+<h3 id="coincidental-cohesion">Coincidental Cohesion</h3>
+
+<blockquote>
+<p>“Coincidental cohesion occurs when there is little or no constructive relationship among the elements of a module;”</p>
+</blockquote>
+
+<p>The author gives an example where a programmer might put three lines of repeated code into its own method.  These three lines might not be related to each other at all, but the programmer thought that since they are repeated they must belong in the same module.  I’ve seen this in code where a developer put data access, logging, and other exception handling in a single reusable method just because they were commonly repeated throughout the code.  The author stresses that this is not necessarily a bad thing, but if the need to insert some other code in between those three lines occurs for only one scenario, then having that reusable method used all over the code base makes it more difficult to change than it should be.</p>
+
+<blockquote>
+<p>“If the duplicated sequences of code…are each coincidentally associated or low in cohesion, a better design might result if they are physically duplicated in the code…by actually writing the code two times, three times, or as many times as necessary in the code”.</p>
+</blockquote>
+
+<p>This quote reminds me of a blog post by Sandi Metz<a href="https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction">[6]</a> where she makes that case that “duplication is far cheaper than the wrong abstraction”.  So basically, it is better to have some duplicated code rather than abstracting out some repeated code into a separate class/method that doesn’t make sense in the long run.  Recovering from a poor design decision is harder than cleaning up duplicated code.</p>
+
+<p>The author states that the most common place to see coincidental cohesion is in startup and termination logic.  This made me think back to my teams code where we might have coincidentally cohesive code and I think we for sure have coincidentally cohesive code in our startup logic for one of our services.</p>
+
+<h3 id="logical-cohesion">Logical Cohesion</h3>
+
+<blockquote>
+<p>“The elements of a module are logically associated if one can think of them as falling into the same logical class of similar or related functions — that is, ones that would logically be thought of together.”</p>
+</blockquote>
+
+<p>The author gives a few examples logically cohesive modules</p>
+
+<ul>
+<li>All input operations put into one module</li>
+<li>All validation of incoming data “regardless of source, type, or use.”</li>
+<li>A general purpose error-routine “depending on the specific type of error, it will print one of several different error messages.
+Logical cohesion is considered a little stronger than coincidental cohesion by the authors.</li>
+</ul>
+
+<h3 id="temporal-cohesion">Temporal Cohesion</h3>
+
+<blockquote>
+<p>“Temporal cohesion means that all occurrences of all elements of processing in a collection occur within the same limited period of time during the execution of the system.”</p>
+</blockquote>
+
+<p>Temporal cohesion is considered to be a very weak form of cohesion, but it is slightly stronger than logical cohesion, and far stronger than coincidental cohesion.</p>
+
+<p>Thinking about some of the code that my team writes, I can pick several classes and functions that have a large amount of temporal cohesion.  There are times when it is tempting to put a bug fix in with another piece of code because it makes sense from a timing perspective, but doing so will make it very difficult to modify that code with confidence in the future.</p>
+
+<h3 id="procedural-cohesion">Procedural Cohesion</h3>
+
+<p>To paraphrase the author “Procedural cohesion occurs when code is put together in a loop, decision process, or linear sequence of steps.  This differs from temporal cohesion in that temporal cohesion does not involve pieces of code which have a linear sequence of steps.  The ordering in a temporally cohesive piece of code is not important.”</p>
+
+<blockquote>
+<p>“to say that a module achieves only procedural cohesion, the elements of processing would have to be elements of some iteration, decision, or sequencing operation — but not also be elements of any stronger associative principles discussed in subsequent sections of this chapter.”</p>
+</blockquote>
+
+<p>Temporally cohesive elements do not have to execute in a particular order while procedurally cohesive elements do need to execute in a particular order in order to be considered procedurally cohesive.</p>
+
+<blockquote>
+<p>“Procedural cohesion associates processing elements on the basis of their procedural or algorithmic relationships.”</p>
+
+<p>“The general point is that procedural cohesion often cuts across functional lines”</p>
+</blockquote>
+
+<p>The authors stress that procedural cohesion is not necessarily bad if combined with other types of cohesion.</p>
+
+<h3 id="communicational-cohesion">Communicational Cohesion</h3>
+
+<blockquote>
+<p>“Communicational cohesion is the lowest level at which we encounter a relationship among processing elements which is intrinsically problem-dependent.  To say that a set of processing elements is communicationally associated means that all of the elements operate upon the same input data set and/or produce the same output data.”</p>
+</blockquote>
+
+<p>It is not the strongest form of cohesion, but it “is sufficiently high as to be generally acceptable in the absence of strong counterarguments or lacking and identifiable alternative structure with higher cohesion”.</p>
+
+<blockquote>
+<p>“Often, it is the result of thinking in terms of all the things that can be done with a given item or piece of data once it is obtained or generated, or, on the other side, in terms of all the things that must be done to create a given result, say a detailed line in a report.”</p>
+</blockquote>
+
+<p>The author states that communicational cohesion between both the input and output data is somewhat weaker than between just the input data and the output data.</p>
+
+<p>If some of the methods in a module or class share the same inputs and outputs those are likely communicationally associated.  If other methods in that same class or module have completely different inputs and outputs that might be an indicator that you’ve included those methods in your class due to logical cohesion rather than communicational cohesion.</p>
+
+<p>The author makes the case that mixing groups of methods in the same module which are communicationally cohesive as a group with only each other but logically cohesive with each other may lead to timing issues with shared data or issues with the sequencing of the operations.  An example given is a module that handles all operations related to a file (opening, closing, writing, rewinding, backspacing, etc).  The opening, closing and writing are communicationally cohesive with each other, but not really with the rewinding and backspacing.  Having those all be a part of the same module may lead to the issues the author described.</p>
+
+<h3 id="sequential-cohesion">Sequential Cohesion</h3>
+
+<p>Sequential cohesion is the second strongest form of cohesion.  The author states that sequential cohesion is a type of cohesion ” in which the output data (or results) from one processing element serve as input data for the next processing element.  In terms of the data flow of a problem, sequential cohesion combines a linear chain of successive (sequential) transformations of data.”  The author mentions that sequential cohesion is stronger than communicational cohesion based on some experiments he performed in 1968 and 1969.</p>
+
+<p>Identifying sequential cohesion can be done by drawing out the data flow graph for a problem.  “The data flow graph for a problem will make it obvious that sequential cohesion results in fewer, simpler intermodular relationships”.  I take this to mean that if you have modules dedicated to handling each type of data separately it will lead to less coupling in your system.</p>
+
+<p>The author states that sequential cohesion can potentially suffer from the same weakness as the previously mentioned levels of cohesion: “In attempting to modify the code for one function found in whole or in part in a module, the programmer may find that he is inadvertently modifying, or that he must consider, code for another function that happens to be in the same module.  Similarly, if we find that each module contains only part of a function (as may sometimes be the case with sequentially cohesive modules), then arguments of coupling apply:  In order to understand what one module does, we must understand what another module does – and the second module may contain other processing elements that have nothing to do with the function performed by the first module.”</p>
+
+<h3 id="functional-cohesion">Functional Cohesion</h3>
+
+<p>The authors consider functional cohesion to be the strongest form of cohesion.  “In a completely functional module, every element of processing is an integral part of, and is essential to, the performance of a single function”.</p>
+
+<blockquote>
+<p>“Functional cohesion is whatever is not sequential, communicational, procedural, temporal, logical, or coincidental.”</p>
+</blockquote>
+
+<p>The author states that the best way to describe functional cohesion is to give some examples.  The easiest things to identify as functionally cohesive are mathematical operations such as calculating a square root, logarithm, or exponential.  If any changes were made to the square root method it would likely change the result of the square root method.</p>
+
+<p>The authors argue that modules which are elementary in nature are likely to be functional in nature.</p>
+
+<p>The authors suggest that one way of identifying functionally cohesive elements is by a process of elimination in which it is shown that the function or module is not one of the other levels of cohesion and then they give some advice to help identifying the type of cohesion for a module.  The authors suggest identifying the functionality of the module in a simple English sentence – ” it should be possible to describe its operation fully in an imperative sentence of simple structure, usually with a single transitive verb and a specific non-plural object.”</p>
+
+<p>The following guidelines are given for identifying the levels of cohesion from the sentence created for the module</p>
+
+<ul>
+<li><blockquote>
+<p>If the only reasonable way of describing the module’s operation is a compound sentence, or a sentence containing a comma, or a sentence containing more than one verb, then the module is probably less than functional.  It may be sequential, communicational, or logical in terms of cohesion.</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>If the descriptive sentence contains such time-oriented words as “first”, “next”, “after”, “then”, “start”, “step”, “when”, “until”, or “for all” then the module probably has temporal or procedural cohesion; sometimes but less often, such words are indicative of sequential cohesion.</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>If the predicate of the descriptive sentence does not contain a single specific objective following the verb, the module is probably logically cohesive.  Thus, a functional module might be described by “Process a GLOP.”  A logicall bound module might be described by “Process all GLOPS,” or “Do things with GLOPS”.</p>
+</blockquote></li>
+
+<li><blockquote>
+<p>Words such as “initialize”, “clean-up”, and “housekeeping” in the descriptive sentence imply temporal cohesion.</p>
+</blockquote></li>
+</ul>
+
+<p>It is key to carefully construct the descriptive sentence.  This will help in identifying the type of cohesion present.</p>
+
+<h2 id="measuring-cohesion">Measuring Cohesion</h2>
+
+<p>The authors stress that any given module will likely contain many of the levels of cohesion mentioned.</p>
+
+<blockquote>
+<p>“The smaller processing elements constituting a function are also sequentially, communicationally, procedurally, temporally, or logically associated”</p>
+
+<p>“Where there is more than one relationship between any pair of processing elements, the highest level of cohesion applies.  This, if module FOO consists of a collection of processing elements, all of which are examples of the same logical class of operations (say, validity checking), but are also all related communicationally in that they check various kinds of validity of one type of item, then FOO is evaluated as having communicational cohesion among all of its elements.”</p>
+
+<p>“For debugging, maintenance, and modification purposes, a module behaves as if it were ‘only as strong as its weakest link&rsquo;”.</p>
+
+<p>“The cohesion of a module is approximately the highest level of cohesion which applicable to all elements of processing in the module.”</p>
+
+<p>“the lowest three levels are generally indicative of unacceptable partitions”</p>
+</blockquote>
+
+<p>The authors give what they believe to be the relative strengths of the levels of cohesion, though they admit it is not a scientific measurement.</p>
+
+<p>0 : coincidental</p>
+
+<p>1 : logical</p>
+
+<p>3 : temporal</p>
+
+<p>5 : procedural</p>
+
+<p>7 : communicational</p>
+
+<p>9 : sequential</p>
+
+<p>10 : functional</p>
+
+<h2 id="side-effects">Side Effects</h2>
+
+<p>There was a little discussion regarding side effects and the impact on cohesion and I wanted to share one quote from the authors regarding</p>
+
+<blockquote>
+<p>“Side effects operate as if they marginally lower the cohesion of any module that includes them.”</p>
+</blockquote>
+
+<p>This an interesting statement because this sounds like a good argument for using a functional style of programming which encourages a reduction of side effects in your program.</p>
+
+<h2 id="general-implementation-details">General Implementation Details</h2>
+
+<p>Logically grouping elements may cause the developer to share code between the logically cohesive elements, thus causing it to be harder to make changes in the elements.</p>
+
+<p>The authors discourage creating one module which performs all of the input validation and transformation of input for a program.  They say that this will likely cause scenarios where if new validations/edits are needed or a modification of how validation is performed is needed, a change will also likely be needed in the main part of the program and other parts of the program.  They suggest that there is a stronger level of cohesion between the elements which validate/edit a piece of data and the elements which process the data and take action on it.  My takeaway was that it would be better to separate the program into multiple modules where each module performs validation/editing and processing of one specific item or group of very similar items.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>The authors summarize their cohesion chapter by stating</p>
+
+<blockquote>
+<p>“From the discussions in this chapter, you should not conclude that all logical modules are bad, nor that editing and validation should always be distributed throughout a system; nor should you attempt to derive any other black-and-white rules of thumb.  High cohesion is not “good”, nor is coincidental cohesion “evil.”  Module cohesion is associated with effective modularity; it has certain predictable effects on transparency, programmaticability, ease of debugging, ease of maintenance, and ease of modification.”</p>
+</blockquote>
+
+<p>The authors essentially state that sometimes tradeoffs in cohesion are necessary to ensure the program runs efficiently.  “The designer may save design effort, too, since logical and temporal groupings are comparatively easy to identify and describe – while complete functional cohesion may require extensive analysis and study.”</p>
+
+<h2 id="references">References</h2>
+
+<p>[1] “Cohesion.” Merriam-Webster.com. Merriam-Webster, n.d. Web. 20 Feb. 2017.</p>
+
+<p>[2] <a href="http://stackoverflow.com/questions/3085285/cohesion-coupling">http://stackoverflow.com/questions/3085285/cohesion-coupling</a></p>
+
+<p>[3] <a href="https://cleancoders.com/episode/clean-code-episode-16/show">https://cleancoders.com/episode/clean-code-episode-16/show</a></p>
+
+<p>[4] <a href="https://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719">https://www.amazon.com/Structured-Design-Fundamentals-Discipline-Computer/dp/0138544719</a></p>
+
+<p>[5] <a href="https://en.wikipedia.org/wiki/No_Silver_Bullet">https://en.wikipedia.org/wiki/No_Silver_Bullet</a></p>
+
+<p>[6] <a href="https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction">https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-navy bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2019 MIL-E-WAH-QUE
+  </a>
+    <div>
+
+
+
+<a href="https://twitter.com/RichardKallay" target="_blank" class="link-transition twitter link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+  <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+<a href="https://www.linkedin.com/in/richard-kallay-062b2a64/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/rakallay" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
