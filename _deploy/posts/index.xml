@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on MIL-E-WAH-QUE</title>
+    <link>https://rakallay.github.io/posts/</link>
+    <description>Recent content in Posts on MIL-E-WAH-QUE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rakallay.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Beginning Total Immersion Swimming</title>
+      <link>https://rakallay.github.io/posts/total-immersion-swimming/</link>
+      <pubDate>Sat, 13 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rakallay.github.io/posts/total-immersion-swimming/</guid>
+      <description>I picked up swimming practice again in the last few weeks after taking a break following my November-December lessons. Last weekend I read chapters 1-3 and the beginning of chapter 8 of “Total Immersion: The Revolutionary Way To Swim Better, Faster, and Easier”[1]. Chapters 1-3 cover more of the theory of total immersion swimming while giving encouraging advice for a novice like me. Chapter 8 is where the drills are explained in detail.</description>
+    </item>
+    
+    <item>
+      <title>Software Cohesion</title>
+      <link>https://rakallay.github.io/posts/cohesion/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rakallay.github.io/posts/cohesion/</guid>
+      <description>Cohesion In 2013 or 2014 I was in a training class and the instructor brought up the term cohesion when describing some code the class was analyzing. This was the first time I had heard of the term cohesion being applied to a piece of code and the instructor did not spend much time on the topic. As a way of cementing the idea in my mind, I wanted to share some things I’ve read and learned regarding cohesion in software.</description>
+    </item>
+    
+  </channel>
+</rss>
