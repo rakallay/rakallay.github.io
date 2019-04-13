@@ -3,6 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rakallay.github.io/posts/total-immersion-swimming/</loc>
+    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/</loc>
+    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/posts/</loc>
+    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rakallay.github.io/posts/cohesion/</loc>
     <lastmod>2018-01-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -11,27 +30,11 @@
   
   <url>
     <loc>https://rakallay.github.io/categories/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rakallay.github.io/</loc>
-    <lastmod>2018-01-07T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rakallay.github.io/posts/</loc>
-    <lastmod>2018-01-07T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rakallay.github.io/tags/</loc>
-    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
