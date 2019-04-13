@@ -4,7 +4,9 @@
 rm -rf _deploy
 
 echo -e "\033[0;32mCloning the publish site...\033[0m"
-git clone git@github.com:rakallay/rakallay.github.io.git _deploy
+#git clone git@github.com:rakallay/rakallay.github.io.git _deploy
+
+git submodule add -b master git@github.com:rakallay/rakallay.github.io.git _deploy
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 hugo
