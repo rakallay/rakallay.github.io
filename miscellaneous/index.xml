@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscellaneous on MIL-E-WAH-QUE</title>
+    <link>https://rakallay.github.io/miscellaneous/</link>
+    <description>Recent content in Miscellaneous on MIL-E-WAH-QUE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rakallay.github.io/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Books/Podcasts/Blogs</title>
+      <link>https://rakallay.github.io/miscellaneous/books-podcasts-blogs/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://rakallay.github.io/miscellaneous/books-podcasts-blogs/</guid>
+      <description>Here is a quick list in no particular order(yet) of some of the books, podcasts, and blogs that I own and/or frequent. Some of the books are books I own but have not read fully yet.
+Books The Last Lecture
+The Road Less Traveled
+Further Along The Road Less Traveled
+Crucial Conversations
+The 7 Habits of Highly Effective People
+Personal Kanban
+The Phoenix Project
+1000+ Little Things Happy Successful People Do Differently</description>
+    </item>
+    
+    <item>
+      <title>Hello Blog</title>
+      <link>https://rakallay.github.io/miscellaneous/hello-blog/</link>
+      <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rakallay.github.io/miscellaneous/hello-blog/</guid>
+      <description>Hi everyone this is my first post on this brand new blog. You may be asking yourself, why is this site called mil-e-wah-que? The answer to that question lies in the city I grew up in and the movie Wayne’s World. I grew up in the city of Milwaukee and in Wayne’s World, there is a scene where Alice Cooper gives Wayne and Garth some interesting info on Milwaukee.
+I plan to use this site to blog about books I’ve read, things I’ve learned as a developer/architect and general life experiences.</description>
+    </item>
+    
+  </channel>
+</rss>

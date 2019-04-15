@@ -3,14 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rakallay.github.io/posts/total-immersion-swimming/</loc>
+    <loc>https://rakallay.github.io/swimming/total-immersion-swimming/</loc>
     <lastmod>2018-01-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rakallay.github.io/posts/learning-to-swim/</loc>
+    <loc>https://rakallay.github.io/swimming/learning-to-swim/</loc>
     <lastmod>2018-01-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -23,27 +23,70 @@
   </url>
   
   <url>
-    <loc>https://rakallay.github.io/posts/</loc>
+    <loc>https://rakallay.github.io/swimming/</loc>
     <lastmod>2018-01-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rakallay.github.io/posts/cohesion/</loc>
+    <loc>https://rakallay.github.io/software/</loc>
     <lastmod>2018-01-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rakallay.github.io/posts/books-podcasts-blogs/</loc>
+    <loc>https://rakallay.github.io/software/cohesion/</loc>
+    <lastmod>2018-01-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/about/about-me/</loc>
     <lastmod>2017-09-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://rakallay.github.io/posts/hello-blog/</loc>
+    <loc>https://rakallay.github.io/about/</loc>
+    <lastmod>2017-09-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/miscellaneous/books-podcasts-blogs/</loc>
+    <lastmod>2017-09-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/contact/contact/</loc>
+    <lastmod>2017-09-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/contact/</loc>
+    <lastmod>2017-09-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/miscellaneous/</loc>
+    <lastmod>2017-09-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/miscellaneous/hello-blog/</loc>
     <lastmod>2016-03-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

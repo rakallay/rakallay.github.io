@@ -13,38 +13,47 @@
     
     <item>
       <title>Beginning Total Immersion Swimming</title>
-      <link>https://rakallay.github.io/posts/total-immersion-swimming/</link>
+      <link>https://rakallay.github.io/swimming/total-immersion-swimming/</link>
       <pubDate>Sat, 13 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rakallay.github.io/posts/total-immersion-swimming/</guid>
+      <guid>https://rakallay.github.io/swimming/total-immersion-swimming/</guid>
       <description>I picked up swimming practice again in the last few weeks after taking a break following my November-December lessons. Last weekend I read chapters 1-3 and the beginning of chapter 8 of “Total Immersion: The Revolutionary Way To Swim Better, Faster, and Easier”[1]. Chapters 1-3 cover more of the theory of total immersion swimming while giving encouraging advice for a novice like me. Chapter 8 is where the drills are explained in detail.</description>
     </item>
     
     <item>
       <title>Learning To Swim</title>
-      <link>https://rakallay.github.io/posts/learning-to-swim/</link>
+      <link>https://rakallay.github.io/swimming/learning-to-swim/</link>
       <pubDate>Sat, 13 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rakallay.github.io/posts/learning-to-swim/</guid>
+      <guid>https://rakallay.github.io/swimming/learning-to-swim/</guid>
       <description>Hey! This is my first blog post about my experiences learning how to swim.
 I took some swimming lessons when I was young(around 5 or 6 years old) but only took a few so I never learned how to swim when I was young. Last year I completed a 100 mile bike ride and two marathons and that piqued my interest in learning how to swim with the eventual idea of doing a triathlon or even a half or full ironman event.</description>
     </item>
     
     <item>
       <title>Software Cohesion</title>
-      <link>https://rakallay.github.io/posts/cohesion/</link>
+      <link>https://rakallay.github.io/software/cohesion/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rakallay.github.io/posts/cohesion/</guid>
+      <guid>https://rakallay.github.io/software/cohesion/</guid>
       <description>Cohesion In 2013 or 2014 I was in a training class and the instructor brought up the term cohesion when describing some code the class was analyzing. This was the first time I had heard of the term cohesion being applied to a piece of code and the instructor did not spend much time on the topic. As a way of cementing the idea in my mind, I wanted to share some things I’ve read and learned regarding cohesion in software.</description>
     </item>
     
     <item>
-      <title>Books/Podcasts/Blogs</title>
-      <link>https://rakallay.github.io/posts/books-podcasts-blogs/</link>
+      <title>About</title>
+      <link>https://rakallay.github.io/about/about-me/</link>
       <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://rakallay.github.io/posts/books-podcasts-blogs/</guid>
+      <guid>https://rakallay.github.io/about/about-me/</guid>
+      <description>About Me Hi!</description>
+    </item>
+    
+    <item>
+      <title>Books/Podcasts/Blogs</title>
+      <link>https://rakallay.github.io/miscellaneous/books-podcasts-blogs/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://rakallay.github.io/miscellaneous/books-podcasts-blogs/</guid>
       <description>Here is a quick list in no particular order(yet) of some of the books, podcasts, and blogs that I own and/or frequent. Some of the books are books I own but have not read fully yet.
 Books The Last Lecture
 The Road Less Traveled
@@ -57,11 +66,21 @@ The Phoenix Project
     </item>
     
     <item>
+      <title>Contact</title>
+      <link>https://rakallay.github.io/contact/contact/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://rakallay.github.io/contact/contact/</guid>
+      <description>Contact Me
+Currently the only way I am willing to have people contact me is via my twitter account – @richardkallay</description>
+    </item>
+    
+    <item>
       <title>Hello Blog</title>
-      <link>https://rakallay.github.io/posts/hello-blog/</link>
+      <link>https://rakallay.github.io/miscellaneous/hello-blog/</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://rakallay.github.io/posts/hello-blog/</guid>
+      <guid>https://rakallay.github.io/miscellaneous/hello-blog/</guid>
       <description>Hi everyone this is my first post on this brand new blog. You may be asking yourself, why is this site called mil-e-wah-que? The answer to that question lies in the city I grew up in and the movie Wayne’s World. I grew up in the city of Milwaukee and in Wayne’s World, there is a scene where Alice Cooper gives Wayne and Garth some interesting info on Milwaukee.
 I plan to use this site to blog about books I’ve read, things I’ve learned as a developer/architect and general life experiences.</description>
     </item>
