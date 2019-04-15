@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>https://rakallay.github.io/posts/learning-to-swim/</loc>
+    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://rakallay.github.io/</loc>
     <lastmod>2018-01-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -24,6 +31,20 @@
   <url>
     <loc>https://rakallay.github.io/posts/cohesion/</loc>
     <lastmod>2018-01-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/posts/books-podcasts-blogs/</loc>
+    <lastmod>2017-09-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rakallay.github.io/posts/hello-blog/</loc>
+    <lastmod>2016-03-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

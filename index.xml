@@ -21,12 +21,49 @@
     </item>
     
     <item>
+      <title>Learning To Swim</title>
+      <link>https://rakallay.github.io/posts/learning-to-swim/</link>
+      <pubDate>Sat, 13 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://rakallay.github.io/posts/learning-to-swim/</guid>
+      <description>Hey! This is my first blog post about my experiences learning how to swim.
+I took some swimming lessons when I was young(around 5 or 6 years old) but only took a few so I never learned how to swim when I was young. Last year I completed a 100 mile bike ride and two marathons and that piqued my interest in learning how to swim with the eventual idea of doing a triathlon or even a half or full ironman event.</description>
+    </item>
+    
+    <item>
       <title>Software Cohesion</title>
       <link>https://rakallay.github.io/posts/cohesion/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rakallay.github.io/posts/cohesion/</guid>
       <description>Cohesion In 2013 or 2014 I was in a training class and the instructor brought up the term cohesion when describing some code the class was analyzing. This was the first time I had heard of the term cohesion being applied to a piece of code and the instructor did not spend much time on the topic. As a way of cementing the idea in my mind, I wanted to share some things I’ve read and learned regarding cohesion in software.</description>
+    </item>
+    
+    <item>
+      <title>Books/Podcasts/Blogs</title>
+      <link>https://rakallay.github.io/posts/books-podcasts-blogs/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://rakallay.github.io/posts/books-podcasts-blogs/</guid>
+      <description>Here is a quick list in no particular order(yet) of some of the books, podcasts, and blogs that I own and/or frequent. Some of the books are books I own but have not read fully yet.
+Books The Last Lecture
+The Road Less Traveled
+Further Along The Road Less Traveled
+Crucial Conversations
+The 7 Habits of Highly Effective People
+Personal Kanban
+The Phoenix Project
+1000+ Little Things Happy Successful People Do Differently</description>
+    </item>
+    
+    <item>
+      <title>Hello Blog</title>
+      <link>https://rakallay.github.io/posts/hello-blog/</link>
+      <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://rakallay.github.io/posts/hello-blog/</guid>
+      <description>Hi everyone this is my first post on this brand new blog. You may be asking yourself, why is this site called mil-e-wah-que? The answer to that question lies in the city I grew up in and the movie Wayne’s World. I grew up in the city of Milwaukee and in Wayne’s World, there is a scene where Alice Cooper gives Wayne and Garth some interesting info on Milwaukee.
+I plan to use this site to blog about books I’ve read, things I’ve learned as a developer/architect and general life experiences.</description>
     </item>
     
   </channel>
