@@ -6,6 +6,10 @@ themesDir = "./themes"
 
 publishdir = "_deploy"
 
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+Paginate = 3
+
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
@@ -24,3 +28,28 @@ publishdir = "_deploy"
   background_color_class = "bg-navy"
   featured_image = "/images/giants-causeway.jpg"
   recent_posts_number = 2
+
+[[menu.main]]
+    name = "Software"
+    url = "/software/"
+    weight = 1
+
+[[menu.main]]
+    name = "Swimming"
+    url = "/swimming/"
+    weight = 2
+
+[[menu.main]]
+    name = "Miscellaneous"
+    url = "/miscellaneous/"
+    weight = 3
+
+[[menu.main]]
+    name = "About Me"
+    url = "/about/"
+    weight = 4
+
+[[menu.main]]
+    name = "Contact Me"
+    url = "/contact/"
+    weight = 5
