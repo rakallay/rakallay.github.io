@@ -33,4 +33,3 @@ git push origin master
 # Clean-up
 cd ..
 rm -rf _deploy
-'
